@@ -1,0 +1,8 @@
+@use "sass:map";
+@import './_cleanup.scss';
+@import './_variables.scss';
+
+body {
+    background-color: map.get($theme-colors-dark, "background");
+    width: 100%;
+}

@@ -1,0 +1,43 @@
+@use "sass:map";
+@import "../../../styles/variables.scss";
+
+.form-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .form-input {
+        height: 30px;
+        margin-bottom: 10px;
+        border: 0;
+        border-bottom: 1px solid map.get($theme-colors-light, "secondary");
+        border-radius: 0%;
+        line-height: 30px;
+        color: map.get($theme-colors-light, "secondary");
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+
+        transition: color 0.3s ease-out;
+
+        &::placeholder {
+            color: map.get($theme-colors-light, "secondary");
+            opacity: 0.5;
+        }
+
+        &.invalid {
+            border-color: map.get($theme-colors-light, "error");
+            color: map.get($theme-colors-light, "error");
+
+            &::placeholder {
+                color: map.get($theme-colors-light, "error");
+            }
+        }
+
+        &:focus {
+            outline: 0;
+            border-color: map.get($theme-colors-light, "primary");
+            color: map.get($theme-colors-light, "primary");
+        }
+    }
+}

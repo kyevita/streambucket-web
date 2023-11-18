@@ -34,7 +34,7 @@ export class RequiredCharactersValidator extends TextValidator<RequiredCharacter
 
             if (missingCharacters.length > 0) {
                 this.validatorStatus.addError(
-                    `field value does not contains the following special characters: ${missingCharacters.join(
+                    `Value does not contains the following special characters: ${missingCharacters.join(
                         ", ",
                     )}`,
                 );

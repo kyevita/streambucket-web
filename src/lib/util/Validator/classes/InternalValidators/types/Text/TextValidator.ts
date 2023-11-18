@@ -12,7 +12,7 @@ export abstract class TextValidator<T = any> extends InternalValidator<T> {
 
         if (!valid) {
             this.validatorStatus.addError(
-                `field value does not meet the minimum required amount of ${this.TYPE_TO_VALIDATE}: ${min}`,
+                `Value does not meet the minimum required amount of ${this.TYPE_TO_VALIDATE}: ${min}`,
             );
         }
 
@@ -24,7 +24,7 @@ export abstract class TextValidator<T = any> extends InternalValidator<T> {
 
         if (!valid) {
             this.validatorStatus.addError(
-                `field value does not meet the maximum required amount of ${this.TYPE_TO_VALIDATE}: ${max}`,
+                `Value does not meet the maximum required amount of ${this.TYPE_TO_VALIDATE}: ${max}`,
             );
         }
 

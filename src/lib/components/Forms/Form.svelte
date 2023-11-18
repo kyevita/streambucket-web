@@ -2,6 +2,7 @@
     import type { Form } from "$lib/util/Validator/classes/Form";
     import type { EventHandler } from "svelte/elements";
 
+    import "./styles/form.scss";
     import { setContext } from "svelte";
     import { writable } from "svelte/store";
 
@@ -34,7 +35,12 @@
     };
 </script>
 
-<form {method} {action} on:submit|preventDefault={_onSubmit}>
+<form
+    class="form-wrapper"
+    {method}
+    {action}
+    on:submit|preventDefault={_onSubmit}
+>
     <slot>
         <p>Empty Form...</p>
     </slot>

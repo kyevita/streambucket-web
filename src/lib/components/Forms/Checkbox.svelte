@@ -16,6 +16,7 @@
 
 <input
     type="checkbox"
+    class="form-input"
     {name}
     {id}
     {checked}

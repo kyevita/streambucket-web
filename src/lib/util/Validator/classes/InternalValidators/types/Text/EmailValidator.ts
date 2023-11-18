@@ -11,9 +11,7 @@ export class EmailValidator extends TextValidator<EmailValidatorOptions> {
     protected validator(value: string): void {
         const { min, max, domain } = this.options || {};
         if (!this.EMAIL_REGEX.test(value)) {
-            this.validatorStatus.addError(
-                `field value is not a valid email address: ${value}`,
-            );
+            this.validatorStatus.addError(`Value is not a valid email address`);
         }
 
         this.validateMinimum(value, min);
@@ -23,7 +21,7 @@ export class EmailValidator extends TextValidator<EmailValidatorOptions> {
 
         if (domain && !emailDomain.includes(domain)) {
             this.validatorStatus.addError(
-                `field value does not contain specified domain ${domain}: ${value}`,
+                `Value does not contain domain "${domain}"`,
             );
         }
     }

@@ -32,7 +32,7 @@ export class OrValidator extends InternalValidator<OrInternalValidatorOptions> {
 
         if (validValidators < minMacth) {
             this.validatorStatus.addError(
-                `field value does not match the minimum required conditions`,
+                `Value does not match the minimum required conditions`,
             );
         }
     }

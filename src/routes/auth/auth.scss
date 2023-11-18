@@ -1,0 +1,42 @@
+@use "sass:map";
+@import "../../lib/styles/variables";
+
+.auth-root {
+    background: map.get($theme-colors-light, "background");
+
+    .action-menu {
+        width: 100%;
+        display: flex;
+        
+        li {
+            background: map.get($theme-colors-light, "primary");
+            display: flex;
+            border-bottom: 2px solid map.get($theme-colors-light, "primary");
+            width: 50%;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+
+            &:first-of-type {
+                border-right: 0;
+            }
+            
+            a {
+                text-decoration: none;
+                color: map.get($theme-colors-light, "background");
+            }
+
+            &.active {
+                background: map.get($theme-colors-light, "background");
+                border: 2px solid map.get($theme-colors-light, "primary");
+                border-bottom: 0;
+
+                a {
+                    color: map.get($theme-colors-light, "primary");
+                }
+            }
+        }
+    }
+}

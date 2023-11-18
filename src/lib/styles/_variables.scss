@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$theme-colors-light: (
+    "background": #ffffff,
+    "primary": #343434,
+    "secondary": #828282,
+    "success": #28a745,
+    "info": #17a2b8,
+    "warning": #ffc107,
+    "error": #d86666,
+);
+
+$theme-colors-dark: (
+    "success": #28a745,
+    "info": #17a2b8,
+    "warning": #ffc107,
+);
